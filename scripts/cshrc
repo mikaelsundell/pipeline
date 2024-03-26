@@ -1,0 +1,3 @@
+alias setprompt 'set prompt="${cwd} > "'
+setprompt
+alias cd 'chdir \!* && setprompt'
