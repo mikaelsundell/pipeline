@@ -87,7 +87,7 @@ This option ensures that the projects are built using the Xcode generator, makin
 
 Brawtool is a set of utilities for processing braw encoded images.
 
-* https://github.com/mikaelsundell/logctool
+* https://github.com/mikaelsundell/brawtool
 
 #### colorpalette
 
