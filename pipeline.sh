@@ -15,16 +15,13 @@ export_var() {
     fi
 }
 
-# pipeline
-echo "Initializing pipeline ..."
-
 if [ -n "$PIPELINE_DIR" ]; then
     pipeline_dir="$PIPELINE_DIR"
 else
     echo "could not find PIPELINE_DIR, make sure it's defined"
     exit 1
 fi
-machine_arch=$(uname -m)
+export_var "PATH" "$pipeline_dir/bin"
 
 # build type
 build_type="${1:-debug}"
@@ -35,11 +32,13 @@ fi
 export_var "PIPELINE_TYPE" $build_type
 
 # 3rdparty
-base_dir="$pipeline_dir/../3rdparty/build/macosx/$machine_arch.$build_type"
-base_dir=$(python3 -c "import os; print(os.path.realpath('$base_dir'))")
+machine_arch=$(uname -m)
+thirdparty_dir="$pipeline_dir/../3rdparty/build/macosx/$machine_arch.$build_type"
+thirdparty_dir=$(python3 -c "import os; print(os.path.realpath('$thirdparty_dir'))")
+export_var "THIRDPARTY_DIR" $thirdparty_dir
 
 # bin
-bin_dir="$base_dir/bin"
+bin_dir="$thirdparty_dir/bin"
 if [ -d "$bin_dir" ]; then
     export_var "PATH" $bin_dir
 else
@@ -56,9 +55,18 @@ if ! command -v cmake &> /dev/null; then
 fi
 
 # site-packages
-sitepackages_dir="$base_dir/site-packages"
+sitepackages_dir="$thirdparty_dir/site-packages"
 if [ -d "$sitepackages_dir" ]; then
     export_var "PYTHONPATH" $sitepackages_dir
 else
     echo "3rdparty site-packages could not be found in: $sitepackages_dir, make sure it's installed"
 fi
+
+# alias
+alias openpipeline='cd $pipeline_dir'
+alias opendocumentation='cd $pipeline_dir/documentation'
+alias openprojects='cd $pipeline_dir/projects'
+alias openpython='cd $pipeline_dir/python'
+
+# pipeline
+echo "Pipeline: initialized"

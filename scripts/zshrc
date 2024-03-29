@@ -12,7 +12,7 @@ cd() {
 }
 
 # pipeline
-export PIPELINE_DIR="/Volumes/Build/github/pipeline"
+export PIPELINE_DIR="/Volumes/Build/pipeline/pipeline"
 if [[ -f "$PIPELINE_DIR/pipeline.sh" ]]; then
     source "$PIPELINE_DIR/pipeline.sh"
 else

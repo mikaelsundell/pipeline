@@ -16,29 +16,38 @@ build_project() {
         return 1
     fi
 
-    # Step 1: Clone the repo
-    echo "Cloning $project_dir from GitHub..."
+    echo "Cloning $project_dir from repository"
     git clone "$repo_url" "$project_dir"
     if [ $? -ne 0 ]; then
         echo "Failed to clone repository."
         return 1
     fi
 
-    # Step 2: Create a build directory and navigate to it
-    echo "Creating build directory..."
     mkdir -p "$build_dir"
     cd "$build_dir" || return
 
-    echo "Configuring project with CMake..."
-    cmake .. -DCMAKE_BUILD_TYPE=$build_type -DCMAKE_INSTALL_PREFIX=$install_dir
+    echo "Configuring project with cmake"
+    local cmake_module_path=""
+    if [ -d "${project_dir}/modules" ]; then
+        cmake_module_path="-DCMAKE_MODULE_PATH=${project_dir}/modules"
+    fi
+
+    cmake .. \
+        -DCMAKE_BUILD_TYPE=$build_type \
+        -DCMAKE_INSTALL_PREFIX=$install_dir \
+        -DCMAKE_PREFIX_PATH=$THIRDPARTY_DIR \
+        $cmake_module_path
+
+
+    echo  -DCMAKE_BUILD_TYPE=$build_type -DCMAKE_INSTALL_PREFIX=$install_dir -DCMAKE_PREFIX_PATH=$THIRDPARTY_DIR $cmake_module_path
+
     if [ $? -ne 0 ]; then
-        echo "CMake configuration failed."
+        echo "CMake configuration failed"
         return 1
     fi
 
-    # Step 4: Build the project
-    echo "Building project..."
-    cmake --build $build_dir #--target install
+    echo "Building and installing project"
+    cmake --build $build_dir --target install
     if [ $? -ne 0 ]; then
         echo "Build failed."
         return 1
@@ -55,6 +64,13 @@ else
     exit 1
 fi
 
+if [ -n "$THIRDPARTY_DIR" ]; then
+    pipeline_dir="$THIRDPARTY_DIR"
+else
+    echo "could not find THIRDPARTY_DIR, make sure it's defined"
+    exit 1
+fi
+
 # projects
 projects_dir="$PIPELINE_DIR/projects"
 install_dir="$PIPELINE_DIR"
@@ -64,22 +80,25 @@ echo "Build brawtool"
 
 
 # colorpalette
-
+echo "Build colorpalette"
+repo_url="https://github.com/mikaelsundell/colorpalette"
+clone_dir="$projects_dir/colorpalette"
+build_project $repo_url $clone_dir $PIPELINE_DIR $PIPELINE_TYPE
 
 # it8tool
-
+echo "Build it8tool"
+repo_url="https://github.com/mikaelsundell/it8tool.git"
+clone_dir="$projects_dir/it8tool"
+build_project $repo_url $clone_dir $PIPELINE_DIR $PIPELINE_TYPE
 
 # logctool
 echo "Build logctool"
 repo_url="https://github.com/mikaelsundell/logctool.git"
 clone_dir="$projects_dir/logctool"
-
 build_project $repo_url $clone_dir $PIPELINE_DIR $PIPELINE_TYPE
 
 # overlaytool
-
-
-
-
-
-
+echo "Build overlaytool"
+repo_url="https://github.com/mikaelsundell/overlaytool.git"
+clone_dir="$projects_dir/overlaytool"
+build_project $repo_url $clone_dir $PIPELINE_DIR $PIPELINE_TYPE
