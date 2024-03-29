@@ -172,7 +172,7 @@ Arri
 Blackmagick
 * https://github.com/mikaelsundell/pipeline/tree/master/documentation/blackmagic
 
-kodak
+Kodak
 * https://github.com/mikaelsundell/pipeline/tree/master/documentation/kodak
 
 
