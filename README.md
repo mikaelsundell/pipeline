@@ -16,7 +16,7 @@ Table of Contents
       - [it8tool](#it8tool)
       - [logctool](#logctool)
       - [overlaytool](#overlaytool)
-      - [Tensorflow](#tensorflow)
+      - [Tensorflow (not built by pipeline)](#tensorflow-not-built-by-pipeline)
   - [Applications](#applications)
       - [Automator](#automator)
       - [Colorman](#colorman)
@@ -30,13 +30,19 @@ Table of Contents
 Introduction
 ---------
 
-The pipeline project will build and install code projects and their dependencies.
+The 3rdparty project must be built parallel to the pipeline project.
+
+* https://github.com/mikaelsundell/3rdparty
+
+This configuration ensures that the pipeline project efficiently compiles and installs various code projects along with their respective dependencies.
+
+To initialize the pipeline, execute the following command in your terminal:
 
 ```shell
 source ./pipeline.sh
 ```
 
-Pipeline can also be added to .zshrc:
+Furthermore, to incorporate Pipeline into your .zshrc for automatic setup, append the following script:
 
 ```shell
 export PIPELINE_DIR="<pipeline>"
@@ -51,6 +57,11 @@ Code projects
 -------------
 
 Pipeline build 
+
+```shell
+cd <pipeline>/projects
+./build.sh
+```
 
 #### brawtool
 
@@ -88,7 +99,7 @@ Overlaytool is a utility for creating overlay images.
 
 * https://github.com/mikaelsundell/overlaytool
 
-#### Tensorflow
+#### Tensorflow (not built by pipeline)
 
 TensorFlow is an end-to-end open source platform for machine learning. It has a comprehensive, flexible ecosystem of tools, libraries, and community resources that lets researchers push the state-of-the-art in ML and developers easily build and deploy ML-powered applications.
 
@@ -97,6 +108,8 @@ TensorFlow is an end-to-end open source platform for machine learning. It has a 
 
 Applications
 -------------
+
+Applications for download:
 
 #### Automator
 
