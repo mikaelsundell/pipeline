@@ -30,20 +30,33 @@ Table of Contents
 Introduction
 ---------
 
-Pipeline is a set of tools and scripts to support color and film development projects. The pipeline project will build and install code projects and their dependencies.
+The pipeline project will build and install code projects and their dependencies.
 
 ```shell
 source ./pipeline.sh
 ```
 
+Pipeline can also be added to .zshrc:
+
+```shell
+export PIPELINE_DIR="<pipeline>"
+if [[ -f "$PIPELINE_DIR/pipeline.sh" ]]; then
+    source "$PIPELINE_DIR/pipeline.sh"
+else
+    echo "pipeline.sh not found in $PIPELINE_DIR, skipping..."
+fi
+```
+
 Code projects
 -------------
+
+Pipeline build 
 
 #### brawtool
 
 Logctool a set of utilities for processing braw encoded images.
 
-* Project: https://github.com/mikaelsundell/logctool
+* https://github.com/mikaelsundell/logctool
 
 #### colorpalette
 
@@ -61,25 +74,25 @@ DCTL is a set of dctl scripts for use with davinci resolve.
 
 Simple utility to demonstrate the capabilities of Qt painter for vectorscope yuv, yiq and rgb color models.
 
-* Project: https://github.com/mikaelsundell/it8tool
+* https://github.com/mikaelsundell/it8tool
 
 #### logctool
 
 Logctool a set of utilities for processing logc encoded images.
 
-* Project: https://github.com/mikaelsundell/logctool
+* https://github.com/mikaelsundell/logctool
 
 #### overlaytool
 
 Overlaytool is a utility for creating overlay images.
 
-* Project: https://github.com/mikaelsundell/overlaytool
+* https://github.com/mikaelsundell/overlaytool
 
 #### Tensorflow
 
 TensorFlow is an end-to-end open source platform for machine learning. It has a comprehensive, flexible ecosystem of tools, libraries, and community resources that lets researchers push the state-of-the-art in ML and developers easily build and deploy ML-powered applications.
 
-* Project: https://github.com/mikaelsundell/tensorflow
+* https://github.com/mikaelsundell/tensorflow
 
 
 Applications
@@ -89,25 +102,25 @@ Applications
 
 Automator is a set of utilities for batch processing files
 
-* Project: https://github.com/mikaelsundell/automator/releases
+* https://github.com/mikaelsundell/automator/releases
 
 #### Colorman
 
 Colorman is an app for color processing and Inspection with grading, scopes, and scripting capabilities.
 
-* Project: https://github.com/mikaelsundell/colorman/releases
+* https://github.com/mikaelsundell/colorman/releases
 
 #### Colorpicker
 
 Colorpicker is a versatile Mac application designed to select and capture colors from various screens. It features a color wheel visualizer, aiding users in color design by offering tools to create harmonious color palettes and explore color relationships.
 
-* Project: https://github.com/mikaelsundell/colorpicker/releases
+* https://github.com/mikaelsundell/colorpicker/releases
 
 ### icloud-snapshot
 
 icloud-snapshot is a utility to copy an icloud directory to a snapshot directory for archival purposes. The utility will download and release local items when needed to save disk space.
 
-* Project: https://github.com/mikaelsundell/icloud-snapshot
+* https://github.com/mikaelsundell/icloud-snapshot
 
 
 Plugins
@@ -117,7 +130,7 @@ Plugins
 
 openimageio.lrplugin is a lightroom plugin to post-process Lightroom exports using openimageio image processing tools
 
-* Project: https://github.com/mikaelsundell/openimageio-lrplugin
+* https://github.com/mikaelsundell/openimageio-lrplugin
 
 
 Documentation
