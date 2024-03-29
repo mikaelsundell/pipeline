@@ -35,7 +35,7 @@ build_project() {
     cmake .. \
         -DCMAKE_INSTALL_PREFIX=$install_dir \
         -DCMAKE_PREFIX_PATH=$THIRDPARTY_DIR \
-        $cmake_module_path -GXcode
+        $cmake_module_path #-GXcode
 
     if [ $? -ne 0 ]; then
         echo "CMake configuration failed"

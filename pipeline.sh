@@ -64,11 +64,14 @@ fi
 
 # alias
 alias openpipeline='open $pipeline_dir'
+alias openbin='open $pipeline_dir/bin'
+alias opendctl='open $pipeline_dir/dctl'
 alias opendocumentation='open $pipeline_dir/documentation'
 alias openprojects='open $pipeline_dir/projects'
 alias openpython='open $pipeline_dir/python'
-
 alias cdpipeline='cd $pipeline_dir'
+alias cdbin='cd $pipeline_dir/bin'
+alias cddctl='cd $pipeline_dir/dctl'
 alias cddocumentation='cd $pipeline_dir/documentation'
 alias cdprojects='cd $pipeline_dir/projects'
 alias cdpython='cd $pipeline_dir/python'

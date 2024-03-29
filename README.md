@@ -137,16 +137,16 @@ Documentation
 -------------
 
 Aces
-* Documentation: https://github.com/mikaelsundell/pipeline/aces
+* Documentation: https://github.com/mikaelsundell/pipeline/tree/master/documentation/aces
 
 Arri
-* Documentation: https://github.com/mikaelsundell/pipeline/arri
+* Documentation: https://github.com/mikaelsundell/pipeline/tree/master/documentation/arri
 
 Blackmagick
-* Documentation: https://github.com/mikaelsundell/pipeline/blackmagic
+* Documentation: https://github.com/mikaelsundell/pipeline/tree/master/documentation/blackmagic
 
 kodak
-* Documentation: https://github.com/mikaelsundell/pipeline/kodak
+* Documentation: https://github.com/mikaelsundell/pipeline/tree/master/documentation/kodak
 
 
 Web Resources
