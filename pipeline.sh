@@ -63,10 +63,15 @@ else
 fi
 
 # alias
-alias openpipeline='cd $pipeline_dir'
-alias opendocumentation='cd $pipeline_dir/documentation'
-alias openprojects='cd $pipeline_dir/projects'
-alias openpython='cd $pipeline_dir/python'
+alias openpipeline='open $pipeline_dir'
+alias opendocumentation='open $pipeline_dir/documentation'
+alias openprojects='open $pipeline_dir/projects'
+alias openpython='open $pipeline_dir/python'
+
+alias cdpipeline='cd $pipeline_dir'
+alias cddocumentation='cd $pipeline_dir/documentation'
+alias cdprojects='cd $pipeline_dir/projects'
+alias cdpython='cd $pipeline_dir/python'
 
 # pipeline
 echo "Pipeline: initialized"
