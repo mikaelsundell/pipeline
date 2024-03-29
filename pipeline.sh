@@ -24,7 +24,7 @@ fi
 export_var "PATH" "$pipeline_dir/bin"
 
 # build type
-build_type="${1:-debug}"
+build_type="${1:-release}"
 if [ "$build_type" != "debug" ] && [ "$build_type" != "release" ]; then
     echo "invalid build type: $build_type (use 'debug' or 'release')"
     exit 1

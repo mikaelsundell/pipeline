@@ -55,6 +55,12 @@ else
 fi
 ```
 
+For debug builds use:
+
+```shell
+source "$PIPELINE_DIR/pipeline.sh debug"
+```
+
 Code projects
 -------------
 
