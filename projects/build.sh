@@ -12,14 +12,14 @@ build_project() {
     local build_type="$4"
 
     if [ -d "$project_dir" ]; then
-        echo "Project dir $project_dir already exists, please remove before running this script"
+        echo "Project dir $project_dir already exists, will be skipped"
         return 1
     fi
 
     echo "Cloning $project_dir from repository"
     git clone "$repo_url" "$project_dir"
     if [ $? -ne 0 ]; then
-        echo "Failed to clone repository."
+        echo "Failed to clone repository"
         return 1
     fi
 
@@ -33,13 +33,9 @@ build_project() {
     fi
 
     cmake .. \
-        -DCMAKE_BUILD_TYPE=$build_type \
         -DCMAKE_INSTALL_PREFIX=$install_dir \
         -DCMAKE_PREFIX_PATH=$THIRDPARTY_DIR \
-        $cmake_module_path
-
-
-    echo  -DCMAKE_BUILD_TYPE=$build_type -DCMAKE_INSTALL_PREFIX=$install_dir -DCMAKE_PREFIX_PATH=$THIRDPARTY_DIR $cmake_module_path
+        $cmake_module_path -GXcode
 
     if [ $? -ne 0 ]; then
         echo "CMake configuration failed"
@@ -47,7 +43,7 @@ build_project() {
     fi
 
     echo "Building and installing project"
-    cmake --build $build_dir --target install
+    cmake --build $build_dir --config $build_type --target install
     if [ $? -ne 0 ]; then
         echo "Build failed."
         return 1
@@ -77,12 +73,20 @@ install_dir="$PIPELINE_DIR"
 
 # brawtool
 echo "Build brawtool"
-
+repo_url="https://github.com/mikaelsundell/brawtool.git"
+clone_dir="$projects_dir/brawtool"
+build_project $repo_url $clone_dir $PIPELINE_DIR $PIPELINE_TYPE
 
 # colorpalette
 echo "Build colorpalette"
 repo_url="https://github.com/mikaelsundell/colorpalette"
 clone_dir="$projects_dir/colorpalette"
+build_project $repo_url $clone_dir $PIPELINE_DIR $PIPELINE_TYPE
+
+# dctl
+echo "Build dctl"
+repo_url="https://github.com/mikaelsundell/dctl"
+clone_dir="$projects_dir/dctl"
 build_project $repo_url $clone_dir $PIPELINE_DIR $PIPELINE_TYPE
 
 # it8tool
