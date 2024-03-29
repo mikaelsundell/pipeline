@@ -10,6 +10,8 @@ Table of Contents
 - [Table of Contents](#table-of-contents)
   - [Introduction](#introduction)
   - [Code projects](#code-projects)
+      - [Building projects](#building-projects)
+      - [Building for Xcode (Optional)](#building-for-xcode-optional)
       - [brawtool](#brawtool)
       - [colorpalette](#colorpalette)
       - [dctl](#dctl)
@@ -56,12 +58,24 @@ fi
 Code projects
 -------------
 
-Pipeline build 
+#### Building projects
+
+To build the projects within the pipeline, navigate to the projects directory inside your pipeline folder and execute the build script:
 
 ```shell
-cd <pipeline>/projects
+cdprojects
 ./build.sh
 ```
+#### Building for Xcode (Optional)
+
+If you are developing with Xcode and would like to configure the build for Xcode, you can add the --xcode option to the build command. This will enable specific configurations suitable for Xcode development:
+
+```shell
+cdprojects
+./build.sh --xcode
+```
+
+This option ensures that the projects are built using the Xcode generator, making them compatible with Xcode development environments. Projects built with Xcode will not install properly due to signing issues, Xcode is only meany for development.
 
 #### brawtool
 

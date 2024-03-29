@@ -3,6 +3,19 @@
 ##  SPDX-License-Identifier: BSD-3-Clause
 ##  https://github.com/mikaelsundell/pipeline
 
+# Initialize Xcode flag as empty
+use_xcode=""
+
+parse_args() {
+    while [[ "$#" -gt 0 ]]; do
+        case $1 in
+            --xcode) use_xcode="-GXcode"; shift ;;
+            *) shift ;;
+        esac
+    done
+}
+parse_args "$@"
+
 # export var
 build_project() {
     local repo_url="$1"
@@ -35,7 +48,7 @@ build_project() {
     cmake .. \
         -DCMAKE_INSTALL_PREFIX=$install_dir \
         -DCMAKE_PREFIX_PATH=$THIRDPARTY_DIR \
-        $cmake_module_path #-GXcode
+        $cmake_module_path $use_xcode
 
     if [ $? -ne 0 ]; then
         echo "CMake configuration failed"
