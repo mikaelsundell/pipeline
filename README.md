@@ -85,7 +85,7 @@ This option ensures that the projects are built using the Xcode generator, makin
 
 #### brawtool
 
-Logctool a set of utilities for processing braw encoded images.
+Brawtool is a set of utilities for processing braw encoded images.
 
 * https://github.com/mikaelsundell/logctool
 
@@ -109,7 +109,7 @@ Simple utility to demonstrate the capabilities of Qt painter for vectorscope yuv
 
 #### logctool
 
-Logctool a set of utilities for processing logc encoded images.
+Logctool is a set of utilities for processing logc encoded images.
 
 * https://github.com/mikaelsundell/logctool
 
