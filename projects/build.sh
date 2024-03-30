@@ -9,20 +9,23 @@ use_xcode=""
 parse_args() {
     while [[ "$#" -gt 0 ]]; do
         case $1 in
-            --xcode) use_xcode="-GXcode"; shift ;;
+            --xcode) use_xcode=1; shift ;;
             *) shift ;;
         esac
     done
 }
 parse_args "$@"
 
-# export var
+# build project
 build_project() {
     local repo_url="$1"
     local project_dir="$2"
     local install_dir="$3"
-    local build_dir="${project_dir}/build"
     local build_type="$4"
+
+    if [ -n "$use_xcode" ]; then
+        project_dir="$project_dir-xcode"
+    fi
 
     if [ -d "$project_dir" ]; then
         echo "Project dir $project_dir already exists, will be skipped"
@@ -36,6 +39,7 @@ build_project() {
         return 1
     fi
 
+    local build_dir="${project_dir}/build"
     mkdir -p "$build_dir"
     cd "$build_dir" || return
 
@@ -45,10 +49,15 @@ build_project() {
         cmake_module_path="-DCMAKE_MODULE_PATH=${project_dir}/modules"
     fi
 
+    local cmake_xcode=""
+    if [ -n "$use_xcode" ]; then
+        cmake_xcode="-GXcode"
+    fi
+
     cmake .. \
         -DCMAKE_INSTALL_PREFIX=$install_dir \
         -DCMAKE_PREFIX_PATH=$THIRDPARTY_DIR \
-        $cmake_module_path $use_xcode
+        $cmake_module_path $cmake_xcode
 
     if [ $? -ne 0 ]; then
         echo "CMake configuration failed"
@@ -56,7 +65,12 @@ build_project() {
     fi
 
     echo "Building and installing project"
-    cmake --build $build_dir --config $build_type --target install
+    if [ -n "$use_xcode" ]; then
+        cmake --build $build_dir --config $build_type
+    else
+        cmake --build $build_dir --config $build_type --target install
+    fi
+    
     if [ $? -ne 0 ]; then
         echo "Build failed."
         return 1

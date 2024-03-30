@@ -81,7 +81,7 @@ cdprojects
 ./build.sh --xcode
 ```
 
-This option ensures that the projects are built using the Xcode generator, making them compatible with Xcode development environments. Projects built with Xcode will not install properly due to signing issues, Xcode is only meany for development.
+This option ensures that the projects are built using the Xcode generator with directory prefix -xcode, making them compatible with Xcode development environments. Projects built with Xcode will not install due to signing issues, Xcode is only intended for development only.
 
 #### brawtool
 
