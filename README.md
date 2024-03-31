@@ -55,10 +55,18 @@ else
 fi
 ```
 
-For debug builds use:
+To configure your environment for development with debug versions of libraries, use the following command:
 
 ```shell
-source "$PIPELINE_DIR/pipeline.sh debug"
+setdebug
+```
+
+This sets your environment to use libraries compiled with debugging symbols, facilitating debugging and development.
+
+For configuring your environment to use release versions of libraries, optimized for performance and without debugging symbols, execute:
+
+```shell
+setrelease
 ```
 
 Code projects

@@ -23,8 +23,13 @@ else
 fi
 export_var "PATH" "$pipeline_dir/bin"
 
+# init
+if [ -f "$PIPELINE_DIR/settings.ini" ]; then
+    source $PIPELINE_DIR/settings.ini
+fi
+
 # build type
-build_type="${1:-release}"
+build_type="${build_type:-release}"
 if [ "$build_type" != "debug" ] && [ "$build_type" != "release" ]; then
     echo "invalid build type: $build_type (use 'debug' or 'release')"
     exit 1
@@ -76,5 +81,17 @@ alias cddocumentation='cd $pipeline_dir/documentation'
 alias cdprojects='cd $pipeline_dir/projects'
 alias cdpython='cd $pipeline_dir/python'
 
+# functions
+setbuild() {
+    if [[ $1 == "debug" || $1 == "release" ]]; then
+        sed -i '' "s/build_type=.*/build_type=$1/" "$PIPELINE_DIR/settings.ini"
+        echo "Build type for the pipeline has been changed to '$1'. Please restart your shell session for the changes to take effect."
+    else
+        echo "Invalid build type specified. Use 'debug' or 'release'."
+    fi
+}
+alias setdebug='setbuild debug'
+alias setrelease='setbuild release'
+
 # pipeline
-echo "Pipeline: initialized"
+echo "Pipeline: initialized with build type: $PIPELINE_TYPE"
