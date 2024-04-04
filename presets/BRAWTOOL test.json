@@ -1,0 +1,13 @@
+{
+  "name": "BRAWTOOL test",
+  "tasks": [
+    {
+      "id": "@1",
+      "name": "Convert to JPEG thumbnail using brawtool",
+      "command": "/Volumes/Build/pipeline/pipeline/bin/brawtool",
+      "extension": "%inputext%.jpg",
+      "arguments": "--outputdirectory %outputdir% --outputformat jpg --inputfilename %inputfile% --apply3dlut --applymetadata --width 2048 --height 2048",
+      "startin": "/Volumes/Build/pipeline/pipeline/bin"
+    }
+  ]
+}
