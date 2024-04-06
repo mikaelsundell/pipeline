@@ -107,7 +107,7 @@ Colorpalette is a tool to process and create palettes of unique colors from imag
 
 DCTL is a set of dctl scripts for use with davinci resolve.
 
-* https://github.com/mikaelsundell/colorpalette
+* https://github.com/mikaelsundell/dctl
 
 #### it8tool
 
