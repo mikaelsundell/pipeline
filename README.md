@@ -18,6 +18,7 @@ Table of Contents
       - [it8tool](#it8tool)
       - [logctool](#logctool)
       - [overlaytool](#overlaytool)
+      - [titletool](#titletool)
       - [Tensorflow (not built by pipeline)](#tensorflow-not-built-by-pipeline)
   - [Applications](#applications)
       - [Automator](#automator)
@@ -124,6 +125,10 @@ Logctool is a set of utilities for processing logc encoded images.
 #### overlaytool
 
 Overlaytool is a utility for creating overlay images.
+
+#### titletool
+
+Titletool is a utility for creating title images.
 
 * https://github.com/mikaelsundell/overlaytool
 

@@ -133,3 +133,9 @@ echo "Build overlaytool"
 repo_url="https://github.com/mikaelsundell/overlaytool.git"
 clone_dir="$projects_dir/overlaytool"
 build_project $repo_url $clone_dir $PIPELINE_DIR $PIPELINE_TYPE
+
+# titletool
+echo "Build titletool"
+repo_url="https://github.com/mikaelsundell/titletool.git"
+clone_dir="$projects_dir/titletool"
+build_project $repo_url $clone_dir $PIPELINE_DIR $PIPELINE_TYPE
