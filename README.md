@@ -126,11 +126,13 @@ Logctool is a set of utilities for processing logc encoded images.
 
 Overlaytool is a utility for creating overlay images.
 
+* https://github.com/mikaelsundell/overlaytool
+* 
 #### titletool
 
 Titletool is a utility for creating title images.
 
-* https://github.com/mikaelsundell/overlaytool
+* https://github.com/mikaelsundell/titletool
 
 #### Tensorflow (not built by pipeline)
 
