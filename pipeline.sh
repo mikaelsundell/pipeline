@@ -90,6 +90,19 @@ setbuild() {
         echo "Invalid build type specified. Use 'debug' or 'release'."
     fi
 }
+
+titlegradient() {
+    if [[ -z $1 || -z $2 ]]; then
+        echo "Usage: titlegradient <title> <subtitle> <gradient>"
+        return 1
+    fi
+    local title=$1
+    local subtitle=$2
+    local gradient=$3
+    local outputfile="${title// /-}.png"  # Replace spaces with dashes for the filename
+
+    titletool --title "$title" --subtitle "$subtitle" --outputfile "$outputfile" --size "1920,1080" --gradient $gradient && open "./$outputfile"
+}
 alias setdebug='setbuild debug'
 alias setrelease='setbuild release'
 
