@@ -22,6 +22,7 @@ else
     exit 1
 fi
 export_var "PATH" "$pipeline_dir/bin"
+export_var "PATH" "$pipeline_dir/scripts"
 
 # init
 if [ -f "$PIPELINE_DIR/settings.ini" ]; then
