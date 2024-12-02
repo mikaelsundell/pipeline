@@ -1,0 +1,20 @@
+#!/bin/bash
+##  Copyright 2022-present Contributors to the 3rdparty project.
+##  SPDX-License-Identifier: BSD-3-Clause
+##  https://github.com/mikaelsundell/pipeline
+
+setprompt() {
+    export PS1="%d > " # %d is the current directory in zsh
+}
+setprompt
+cd() {
+    builtin cd "$@" && setprompt
+}
+
+# pipeline
+export PIPELINE_DIR="/Volumes/Build/pipeline/pipeline"
+if [[ -f "$PIPELINE_DIR/pipeline.sh" ]]; then
+    source "$PIPELINE_DIR/pipeline.sh"
+else
+    echo "pipeline.sh not found in $PIPELINE_DIR, skipping..."
+fi

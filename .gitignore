@@ -1,0 +1,10 @@
+.DS_Store
+.vscode
+settings.json
+bin/*
+lib/*
+include/*
+dctl/*
+tools/build.*
+projects/*
+!projects/build_projects.sh
