@@ -29,7 +29,6 @@ Table of contents
   - [Plugins](#plugins)
       - [openimageio.lrplugin](#openimageiolrplugin)
   - [Tools deployment](#tools-deployment)
-  - [Dependencies](#dependencies)
   - [Documentation](#documentation)
   - [Web Resources](#web-resources)
   
@@ -173,7 +172,7 @@ Colorman is an app for color processing and Inspection with grading, scopes, and
 
 Colorpicker is a versatile Mac application designed to select and capture colors from various screens. It features a color wheel visualizer, aiding users in color design by offering tools to create harmonious color palettes and explore color relationships.
 
-Project page
+Project page    
 https://github.com/mikaelsundell/colorpicker
 
 <a href="https://apps.apple.com/se/app/colorpicker-colors-in-harmony/id6503638316?l=en-GB&mt=12" target="_blank" style="cursor: pointer;">
@@ -185,7 +184,12 @@ https://github.com/mikaelsundell/colorpicker
 
 Jobman is a Mac application designed for efficient batch processing of files based on predefined tasks.
 
-* https://github.com/mikaelsundell/jobman/releases
+Project page    
+https://github.com/mikaelsundell/jobman/releases
+
+<a href="https://apps.apple.com/se/app/jobman-batch-processing/id6738392819?l=en-GB&mt=12" target="_blank" style="cursor: pointer;">
+    <img src="resources/Badge.png" valign="middle" alt="Icon" width="140">
+</a>
 
 ### icloud-snapshot
 
@@ -220,17 +224,6 @@ Build tools with signing and notarization
 cdtools
 ./build_tools release --sign
 ```
-
-Dependencies
--------------
-
-| Project     | Description |
-| ----------- | ----------- |
-| OpenImageIO | [OpenImageIO project](https://github.com/OpenImageIO/oiio)
-| OpenColorIO | [OpenColorIO project](https://github.com/AcademySoftwareFoundation/OpenColorIO)
-| OpenEXR     | [OpenEXR project](https://github.com/AcademySoftwareFoundation/openexr)
-| Rawtoaces   | [Rawtoaces](https://github.com/AcademySoftwareFoundation/rawtoaces)
-| 3rdparty    | [3rdparty project containing all dependencies @ Github](https://github.com/mikaelsundell/3rdparty)
 
 Documentation
 -------------
