@@ -62,10 +62,23 @@ fi
 
 # site-packages
 sitepackages_dir="$thirdparty_dir/site-packages"
-if [ -d "$sitepackages_dir" ]; then
-    export_var "PYTHONPATH" $sitepackages_dir
+libpython_dir="$thirdparty_dir/lib/python"
+
+if [ -d "$sitepackages_dir" ] || [ -d "$libpython_dir" ]; then
+    pythonpath_value=""
+    if [ -d "$sitepackages_dir" ]; then
+        pythonpath_value="$sitepackages_dir"
+    fi
+    if [ -d "$libpython_dir" ]; then
+        if [ -n "$pythonpath_value" ]; then
+            pythonpath_value="$pythonpath_value:$libpython_dir"
+        else
+            pythonpath_value="$libpython_dir"
+        fi
+    fi
+    export_var "PYTHONPATH" "$pythonpath_value"
 else
-    echo "3rdparty site-packages could not be found in: $sitepackages_dir, make sure it's installed"
+    echo "3rdparty site-packages and lib/python could not be found in: $thirdparty_dir, make sure they are installed"
 fi
 
 # alias
