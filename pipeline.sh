@@ -62,7 +62,6 @@ fi
 
 # qt
 if [ "$build_type" = "debug" ]; then
-    echo "export..."
     export_var "DYLD_IMAGE_SUFFIX" "_debug"
 fi
 
