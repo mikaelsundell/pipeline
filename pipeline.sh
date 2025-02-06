@@ -60,6 +60,12 @@ if ! command -v cmake &> /dev/null; then
     fi
 fi
 
+# qt
+if [ "$build_type" = "debug" ]; then
+    echo "export..."
+    export_var "DYLD_IMAGE_SUFFIX" "_debug"
+fi
+
 # site-packages
 sitepackages_dir="$thirdparty_dir/site-packages"
 libpython_dir="$thirdparty_dir/lib/python"
