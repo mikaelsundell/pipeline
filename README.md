@@ -15,7 +15,6 @@ Table of contents
       - [brawtool](#brawtool)
       - [colorpalette](#colorpalette)
       - [colortool](#colortool)
-      - [it8tool](#it8tool)
       - [logctool](#logctool)
       - [photographic-dctls](#photographic-dctls)
       - [symmetrytool](#symmetrytool)
@@ -119,12 +118,6 @@ Colorpalette is a tool to process and create palettes of unique colors from imag
 colortool is a utility set for color space conversions, with support for white point adaptation.
 
 * https://github.com/mikaelsundell/colortool
-
-#### it8tool
-
-it8tool is a set of utilities for computation of color correction matrices from it8 charts.
-
-* https://github.com/mikaelsundell/it8tool
 
 #### logctool
 
