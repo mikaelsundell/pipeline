@@ -6,5 +6,6 @@ lib/*
 include/*
 dctl/*
 tools/build.*
+share/*
 projects/*
 !projects/build_projects.sh

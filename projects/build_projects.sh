@@ -106,38 +106,35 @@ fi
 projects_dir="$PIPELINE_DIR/projects"
 install_dir="$PIPELINE_DIR"
 project_names=(
+    "rawtoaces"
     "brawtool" 
     "cineontool"
     "colorpalette"
     "colortool"
     "photographic-dctls"
-    "rawtoaces"
-    "it8tool"
     "logctool"
     "symmetrytool"
     "texttool"
 )
     
 project_repos=(
+    "https://github.com/mikaelsundell/rawtoaces"
     "https://github.com/mikaelsundell/brawtool.git"
     "https://github.com/mikaelsundell/cineontool.git"
     "https://github.com/mikaelsundell/colorpalette.git"
     "https://github.com/mikaelsundell/colortool.git"
     "https://github.com/mikaelsundell/photographic-dctls"
-    "https://github.com/mikaelsundell/rawtoaces"
-    "https://github.com/mikaelsundell/it8tool.git"
     "https://github.com/mikaelsundell/logctool.git"
     "https://github.com/mikaelsundell/symmetrytool.git"
     "https://github.com/mikaelsundell/texttool.git"
 )
 
 project_branches=(
+    "ms-OIIO"
     "master"
     "master"
     "master"
     "master"
-    "master"
-    "ms-rawtoaces"
     "master"
     "master"
     "master"
