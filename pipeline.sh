@@ -100,6 +100,7 @@ alias cddocumentation='cd $pipeline_dir/documentation'
 alias cdprojects='cd $pipeline_dir/projects'
 alias cdpython='cd $pipeline_dir/python'
 alias cdtools='cd $pipeline_dir/tools'
+alias cdthirdparty='cd $thirdparty_dir'
 
 alias pipelinetype='echo Pipeline build type: $PIPELINE_TYPE'
 alias pipelineupdate='cdpipeline && git pull'
