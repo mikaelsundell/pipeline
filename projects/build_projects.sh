@@ -125,14 +125,12 @@ project_repos=(
     "https://github.com/mikaelsundell/colortool.git"
     "https://github.com/mikaelsundell/photographic-dctls"
     "https://github.com/mikaelsundell/logctool.git"
-    "https://github.com/mikaelsundell/spectraltool.git"
     "https://github.com/mikaelsundell/symmetrytool.git"
     "https://github.com/mikaelsundell/texttool.git"
 )
 
 project_branches=(
     "ms-250830"
-    "master"
     "master"
     "master"
     "master"
