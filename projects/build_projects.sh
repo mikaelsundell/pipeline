@@ -1,5 +1,5 @@
 #!/bin/bash
-##  Copyright 2022-present Contributors to the 3rdparty project.
+##  Copyright 2022-present Contributors to the pipeline project.
 ##  SPDX-License-Identifier: BSD-3-Clause
 ##  https://github.com/mikaelsundell/pipeline 
 
