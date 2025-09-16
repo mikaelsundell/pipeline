@@ -78,7 +78,7 @@ setrelease
 Code projects
 -------------
 
-#### Building projects
+### Building projects
 
 To build the projects within the pipeline, navigate to the projects directory inside your pipeline folder and execute the build script:
 
@@ -86,7 +86,7 @@ To build the projects within the pipeline, navigate to the projects directory in
 cdprojects
 ./build.sh
 ```
-#### Building for Xcode (Optional)
+### Building for Xcode (Optional)
 
 If you are developing with Xcode and would like to configure the build for Xcode, you can add the --xcode option to the build command. This will enable specific configurations suitable for Xcode development:
 
@@ -97,7 +97,7 @@ cdprojects
 
 This option ensures that the projects are built using the Xcode generator with directory prefix -xcode, making them compatible with Xcode development environments. Projects built with Xcode will not install due to signing issues, Xcode is only intended for development only.
 
-#### brawtool
+### brawtool
 
 Brawtool is a set of utilities for processing braw encoded images.
 
@@ -107,43 +107,43 @@ Dependency:
 
 * https://www.blackmagicdesign.com/event/blackmagicrawinstaller
 
-#### colorpalette
+### colorpalette
 
 Colorpalette is a tool to process and create palettes of unique colors from images.
 
 * https://github.com/mikaelsundell/colorpalette
 
-#### colortool
+### colortool
 
 colortool is a utility set for color space conversions, with support for white point adaptation.
 
 * https://github.com/mikaelsundell/colortool
 
-#### logctool
+### logctool
 
 Logctool is a set of utilities for processing logc encoded images.
 
 * https://github.com/mikaelsundell/logctool
 
-#### photographic-dctls
+### photographic-dctls
 
 This set of DCTL scripts is all about experimenting with the math behind color science, including ARRI LogC, ACES AP0, Cineon, and more. 
 
 * https://github.com/mikaelsundell/photographic-dctls
 
-#### symmetrytool
+### symmetrytool
 
 Symmetrytool is a utility for exploring the math of symmetry in art and design.
 
 * https://github.com/mikaelsundell/symmetrytool
   
-#### texttool
+### texttool
 
 Texttool is a utility for creating text in images
 
 * https://github.com/mikaelsundell/texttool
 
-#### Tensorflow (not built by pipeline)
+### Tensorflow (not built by pipeline)
 
 TensorFlow is an end-to-end open source platform for machine learning. It has a comprehensive, flexible ecosystem of tools, libraries, and community resources that lets researchers push the state-of-the-art in ML and developers easily build and deploy ML-powered applications.
 
@@ -155,13 +155,7 @@ Applications
 
 Applications for download:
 
-#### Colorman
-
-Colorman is an app for color processing and Inspection with grading, scopes, and scripting capabilities.
-
-* https://github.com/mikaelsundell/colorman/releases
-
-#### Colorpicker
+### Colorpicker
 
 Colorpicker is a versatile Mac application designed to select and capture colors from various screens. It features a color wheel visualizer, aiding users in color design by offering tools to create harmonious color palettes and explore color relationships.
 
@@ -172,8 +166,7 @@ https://github.com/mikaelsundell/colorpicker
     <img src="resources/Badge.png" valign="middle" alt="Icon" width="140">
 </a>
 
-  
-#### Jobman
+### Jobman
 
 Jobman is a Mac application designed for efficient batch processing of files based on predefined tasks.
 
@@ -183,6 +176,17 @@ https://github.com/mikaelsundell/jobman/releases
 <a href="https://apps.apple.com/se/app/jobman-batch-processing/id6738392819?l=en-GB&mt=12" target="_blank" style="cursor: pointer;">
     <img src="resources/Badge.png" valign="middle" alt="Icon" width="140">
 </a>
+
+## Presets
+
+[Jobman presets](presets)
+
+### Specviz
+
+Experimental exploration of spectral data visualization and interaction using C++ and Qt, serving as a lightweight alternative to existing scientific plotting tools.
+
+Project page    
+https://github.com/mikaelsundell/specviz/releases
 
 ### icloud-snapshot
 
@@ -194,7 +198,7 @@ icloud-snapshot is a utility to copy an icloud directory to a snapshot directory
 Plugins
 -------
 
-#### openimageio.lrplugin
+### openimageio.lrplugin
 
 openimageio.lrplugin is a lightroom plugin to post-process Lightroom exports using openimageio image processing tools
 
@@ -217,22 +221,6 @@ Build tools with signing and notarization
 cdtools
 ./build_tools release --sign
 ```
-
-Documentation
--------------
-
-Aces
-* https://github.com/mikaelsundell/pipeline/tree/master/documentation/aces
-
-Arri
-* https://github.com/mikaelsundell/pipeline/tree/master/documentation/arri
-
-Blackmagick
-* https://github.com/mikaelsundell/pipeline/tree/master/documentation/blackmagic
-
-Kodak
-* https://github.com/mikaelsundell/pipeline/tree/master/documentation/kodak
-
 
 Web Resources
 -------------
