@@ -98,49 +98,49 @@ cdprojects
 This option ensures that the projects are built using the Xcode generator with directory prefix -xcode, making them compatible with Xcode development environments. Projects built with Xcode will not install due to signing issues, Xcode is only intended for development only.
 
 ### brawtool
----
+-------
 Brawtool is a set of utilities for processing braw encoded images.
 
 * https://github.com/mikaelsundell/brawtool
 
 ### colorpalette
----
+-------
 Colorpalette is a tool to process and create palettes of unique colors from images.
 
 * https://github.com/mikaelsundell/colorpalette
 
 ### colortool
----
+-------
 colortool is a utility set for color space conversions, with support for white point adaptation.
 
 * https://github.com/mikaelsundell/colortool
 
 ### logctool
----
+-------
 Logctool is a set of utilities for processing logc encoded images.
 
 * https://github.com/mikaelsundell/logctool
 
 ### photographic-dctls
----
+-------
 This set of DCTL scripts is all about experimenting with the math behind color science, including ARRI LogC, ACES AP0, Cineon, and more. 
 
 * https://github.com/mikaelsundell/photographic-dctls
 
 ### symmetrytool
----
+-------
 Symmetrytool is a utility for exploring the math of symmetry in art and design.
 
 * https://github.com/mikaelsundell/symmetrytool
   
 ### texttool
----
+-------
 Texttool is a utility for creating text in images
 
 * https://github.com/mikaelsundell/texttool
 
 ### Tensorflow (not built by pipeline)
-
+-------
 TensorFlow is an end-to-end open source platform for machine learning. It has a comprehensive, flexible ecosystem of tools, libraries, and community resources that lets researchers push the state-of-the-art in ML and developers easily build and deploy ML-powered applications.
 
 * https://github.com/mikaelsundell/tensorflow
@@ -150,7 +150,7 @@ Applications
 -------------
 
 ### Colorpicker
----
+-------
 Colorpicker is a versatile Mac application designed to select and capture colors from various screens. It features a color wheel visualizer, aiding users in color design by offering tools to create harmonious color palettes and explore color relationships.
 
 __Project page__    
@@ -161,7 +161,7 @@ https://github.com/mikaelsundell/colorpicker
 </a>
 
 ### Jobman
----
+-------
 Jobman is a Mac application designed for efficient batch processing of files based on predefined tasks.
 
 __Project page__  
@@ -175,35 +175,35 @@ __Presets page__
 </a>
 
 ### Filmlog
----
+-------
 Filmlog is a film photography companion app designed to help you organize your film rolls and frames with precision and ease. Add metadata like roll name, push/pull rating, and film stock; attach reference photos of your roll and light meter readings; and keep track of individual frames as you shoot.
 
 __Project page__  
 * https://github.com/mikaelsundell/filmlog
 
 ### Flipman
----
+-------
 This project is a purely experimental exploration of Qt's accelerated 3D API and its shader abstraction layer, applied to QuickTime video playback and macOS Mach timing APIs.
 
 __Project page__  
 * https://github.com/mikaelsundell/flipman
 
 ### Specviz
----
+-------
 Experimental exploration of spectral data visualization and interaction using C++ and Qt, serving as a lightweight alternative to existing scientific plotting tools.
 
 Project page    
 * https://github.com/mikaelsundell/specviz/releases
 
 ### Usdviewer
----
+-------
 experimental exploration of USD and eventually MaterialX visualization and interaction using C++ and Qt.
 
 __Project page__  
 * https://github.com/mikaelsundell/usdviewer/releases
 
 ### icloud-snapshot
----
+-------
 icloud-snapshot is a utility to copy an icloud directory to a snapshot directory for archival purposes. The utility will download and release local items when needed to save disk space.
 
 __Project page__  
@@ -214,7 +214,7 @@ Plugins
 -------
 
 ### openimageio.lrplugin
----
+-------
 openimageio.lrplugin is a lightroom plugin to post-process Lightroom exports using openimageio image processing tools
 
 * https://github.com/mikaelsundell/openimageio-lrplugin
