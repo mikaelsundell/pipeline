@@ -103,10 +103,6 @@ Brawtool is a set of utilities for processing braw encoded images.
 
 * https://github.com/mikaelsundell/brawtool
 
-Dependency:
-
-* https://www.blackmagicdesign.com/event/blackmagicrawinstaller
-
 ### colorpalette
 ---
 Colorpalette is a tool to process and create palettes of unique colors from images.
